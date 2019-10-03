@@ -15,9 +15,9 @@ public class Administracion extends Empleado{
 		this.seccion = seccion;
 	}
 
-	//constructor
-	public Administracion(String nombre, String DNI, String seccion) {
-		super(nombre, DNI, seccion);
+	//constructor (no me funciona el constructor)
+	public Administracion(String nombre, String dni, String seccion) {
+		super(nombre, dni, seccion);
 		this.seccion = seccion;
 
 	}
