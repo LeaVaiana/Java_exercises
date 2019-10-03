@@ -5,34 +5,56 @@ package ejercicioHerencia;
 	public class Empleado {
 		//propiedad protected ara acceder desde otra clase
 		protected String nombre;
-		protected String DNI;
+		protected String dni;
 	    protected static double sueldo;
-	    double sueldoNeto;
+	    //double sueldoNeto;
 	    
 	    
 	 
 		
 		//GETTERS AND SETTERS para poderlos modificar desde el exterior
+		
+		
 		public String getNombre() {
 			return nombre;
 		}
+
+
 		public void setNombre(String nombre) {
 			this.nombre = nombre;
 		}
-		public String getDNI() {
-			return DNI;
+
+
+		public String getDni() {
+			return dni;
 		}
-		public void setDNI(String dNI) {
-			DNI = dNI;
+
+
+		public void setDni(String dni) {
+			this.dni = dni;
 		}
-		public Double getSueldo() {
+
+
+		public static double getSueldo() {
 			return sueldo;
 		}
-		public void setSueldo(Double sueldo) {
-			this.sueldo = sueldo;
+
+
+		public static void setSueldo(double sueldo) {
+			Empleado.sueldo = sueldo;
 		}
-		
-		
+
+
+		/*public double getSueldoNeto() {
+			return sueldoNeto;
+		}
+
+
+		public void setSueldoNeto(double sueldoNeto) {
+			this.sueldoNeto = sueldoNeto;
+		}*/
+
+
 		//METODO getIRPF y sueldoNeto
 		private static double getIRPF() {
 			if(sueldo >=3000) 
@@ -48,17 +70,11 @@ package ejercicioHerencia;
 			return (sueldo * getIRPF());
 		}
 	
-		
-		public Empleado(String nombre, String DNI) {
-			
+		//CONSTRUCTOR
+		public Empleado(String nombre, String dni) {
+			super();
 			this.nombre = nombre;
-			this.DNI = getDNI();
+			this.dni = dni;
 		}
-		
-		
-		/*public Empleado() {
-			nombre = "Gigi";
-			DNI = "efgh";
-		}*/
 	}
 
